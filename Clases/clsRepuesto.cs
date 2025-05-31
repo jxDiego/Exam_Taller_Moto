@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Servicios_Jue.Clases
 {
-    public class clsProducto
+    public class clsRepuesto
     {
         private Almacen_Repuesto_MotosEntities db = new Almacen_Repuesto_MotosEntities();
         public Repuesto repuesto { get; set; }
