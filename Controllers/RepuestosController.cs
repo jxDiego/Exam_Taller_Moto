@@ -31,17 +31,17 @@ namespace Exam_Taller_Moto.Controllers
         }
         [HttpGet]
         [Route("Consultar")]
-        public Repuesto Consultar(int Codigo)
+        public Repuesto Consultar(int IdRepuesto)
         {
             clsRepuesto Repuesto = new clsRepuesto();
-            return Repuesto.Consultar(Codigo);
+            return Repuesto.Consultar(IdRepuesto);
         }
         [HttpGet]
         [Route("ConsultarXNombre")]
-        public List<Repuesto> ConsultarXNombre(String Nombre)
+        public List<Repuesto> ConsultarXNombre(int IdRepuesto)
         {
             clsRepuesto Repuesto = new clsRepuesto();
-            return Repuesto.ConsultarXNombre(Nombre);
+            return Repuesto.ConsultarXNombre(IdRepuesto);
         }
         [HttpPost]
         [Route("Insertar")]
