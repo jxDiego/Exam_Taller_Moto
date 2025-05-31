@@ -218,6 +218,8 @@
     <Compile Include="Clases\clsEmpleado.cs" />
     <Compile Include="Clases\clsLogin.cs" />
     <Compile Include="Clases\clsRepuesto.cs" />
+    <Compile Include="Clases\clsTelefonoClientes.cs" />
+    <Compile Include="Clases\clsTipoTelefono.cs" />
     <Compile Include="Clases\clsUsuario.cs" />
     <Compile Include="Clases\TokenGenerator.cs" />
     <Compile Include="Clases\TokenValidationHandler.cs" />
@@ -225,6 +227,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RepuestosController.cs" />
+    <Compile Include="Controllers\TelefonoClientesController.cs" />
+    <Compile Include="Controllers\TipoTelefonosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
