@@ -69,11 +69,11 @@ namespace Exam_Taller_Moto.Controllers
             return Repuesto.Eliminar();
         }
         [HttpDelete]
-        [Route("EliminarXCodigo")]
-        public string EliminarXCodigo(int Codigo)
+        [Route("EliminarXIdRepuesto")]
+        public string EliminarXIdRepuesto(int IdRepuesto)
         {
             clsRepuesto Repuesto = new clsRepuesto();
-            return Repuesto.Eliminar(Codigo);
+            return Repuesto.Eliminar(IdRepuesto);
         }
 
 
