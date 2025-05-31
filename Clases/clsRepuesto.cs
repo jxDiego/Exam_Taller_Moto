@@ -5,7 +5,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 
-namespace Servicios_Jue.Clases
+namespace Exam_Taller_Moto.Clases
 {
     public class clsRepuesto
     {
@@ -15,31 +15,30 @@ namespace Servicios_Jue.Clases
         {
             try
             {
-                db.Repuestoes.Add(repuesto); //Agregar el objeto a la lista de "producto". Todavia no se agrega a la base de datos. Se debe invocar el metodo SaveChanges()
-                db.SaveChanges(); //Guardar los cambios en la base de datos
-                return "Producto insertado correctamente";
+                db.Repuestoes.Add(repuesto); 
+                db.SaveChanges(); 
+                return "Repuesto insertado correctamente";
             }
             catch (Exception ex)
             {
-                return "Error al insertar el producto: " + ex.Message;
+                return "Error al insertar el Repuesto: " + ex.Message;
             }
         }
         public string Actualizar()
         {
             try
             {
-                Repuesto prod = Consultar(repuesto.IdRepuesto);
-                if (prod == null)
+                Repuesto repu = Consultar(repuesto.IdRepuesto);
+                if (repu == null)
                 {
-                    return "El producto con el codigo ingresado no existe, por lo tanto no se puede actualizar";
+                    return "El repuesto con el codigo ingresado no existe, por lo tanto no se puede actualizar";
                 }
-                db.Repuestoes.AddOrUpdate(repuesto); //Actualiza el objeto producto en la lista de "producto". Todavia no se agrega a la base de datos. Se debe invocar el metodo SaveChanges()
-                db.SaveChanges(); //Guardar los cambios en la base de datos
-                return "Se actualizo el producto correctamente";
+                db.Repuestoes.AddOrUpdate(repuesto); 
+                return "Se actualizo el repuesto correctamente";
             }
             catch (Exception ex)
             {
-                return "No se pudo actualizar el producto" + ex.Message;
+                return "No se pudo actualizar el repuesto" + ex.Message;
             }
         }
         public Repuesto Consultar(int IdRepuesto)
