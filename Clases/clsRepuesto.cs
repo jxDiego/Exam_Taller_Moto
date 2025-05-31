@@ -22,6 +22,7 @@ namespace Servicios_Jue.Clases
             catch (Exception ex)
             {
                 return "Error al insertar el producto: " + ex.Message;
+                //holaaa
             }
         }
         public string Actualizar()
