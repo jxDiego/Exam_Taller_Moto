@@ -33,7 +33,8 @@ namespace Exam_Taller_Moto.Clases
                 {
                     return "El repuesto con el codigo ingresado no existe, por lo tanto no se puede actualizar";
                 }
-                db.Repuestoes.AddOrUpdate(repuesto); 
+                db.Repuestoes.AddOrUpdate(repuesto);
+                db.SaveChanges();
                 return "Se actualizo el repuesto correctamente";
             }
             catch (Exception ex)
