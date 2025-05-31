@@ -5,7 +5,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 
-namespace Servicios_Jue.Clases
+namespace Exam_Taller_Moto.Clases
 {
     public class clsRepuesto
     {
@@ -15,31 +15,30 @@ namespace Servicios_Jue.Clases
         {
             try
             {
-                db.Repuestoes.Add(repuesto); //Agregar el objeto a la lista de "producto". Todavia no se agrega a la base de datos. Se debe invocar el metodo SaveChanges()
-                db.SaveChanges(); //Guardar los cambios en la base de datos
-                return "Producto insertado correctamente";
+                db.Repuestoes.Add(repuesto); 
+                db.SaveChanges(); 
+                return "Repuesto insertado correctamente";
             }
             catch (Exception ex)
             {
-                return "Error al insertar el producto: " + ex.Message;
+                return "Error al insertar el Repuesto: " + ex.Message;
             }
         }
         public string Actualizar()
         {
             try
             {
-                Repuesto prod = Consultar(repuesto.IdRepuesto);
-                if (prod == null)
+                Repuesto repu = Consultar(repuesto.IdRepuesto);
+                if (repu == null)
                 {
-                    return "El producto con el codigo ingresado no existe, por lo tanto no se puede actualizar";
+                    return "El repuesto con el codigo ingresado no existe, por lo tanto no se puede actualizar";
                 }
-                db.Repuestoes.AddOrUpdate(repuesto); //Actualiza el objeto producto en la lista de "producto". Todavia no se agrega a la base de datos. Se debe invocar el metodo SaveChanges()
-                db.SaveChanges(); //Guardar los cambios en la base de datos
-                return "Se actualizo el producto correctamente";
+                db.Repuestoes.AddOrUpdate(repuesto); 
+                return "Se actualizo el repuesto correctamente";
             }
             catch (Exception ex)
             {
-                return "No se pudo actualizar el producto" + ex.Message;
+                return "No se pudo actualizar el repuesto" + ex.Message;
             }
         }
         public Repuesto Consultar(int IdRepuesto)
@@ -52,10 +51,10 @@ namespace Servicios_Jue.Clases
                 .OrderBy(p => p.Nombre)
                 .ToList();
         }
-        public List<Repuesto> ConsultarXNombre(String Nombre)
+        public List<Repuesto> ConsultarXNombre(int IdRepuesto)
         {
             return db.Repuestoes
-                .Where(p => p.Nombre == Nombre)
+                .Where(p => p.IdRepuesto == IdRepuesto)
                 .OrderBy(p => p.Nombre)
                 .ToList();
         }
@@ -63,48 +62,48 @@ namespace Servicios_Jue.Clases
         {
             try
             {
-                Repuesto prod = Consultar(repuesto.IdRepuesto);
-                if (prod == null)
+                Repuesto repu = Consultar(repuesto.IdRepuesto);
+                if (repu == null)
                 {
-                    return "El producto con el codigo ingresado no existe, por lo tanto no se puede eliminar";
+                    return "El repuesto con el codigo ingresado no existe, por lo tanto no se puede eliminar";
                 }
-                db.Repuestoes.Remove(prod);
+                db.Repuestoes.Remove(repu);
                 db.SaveChanges();
-                return "Se elimino el producto correctamente";
+                return "Se elimino el repuesto correctamente";
             }
             catch (Exception ex)
             {
-                return "No se pudo eliminar el producto" + ex.Message;
+                return "No se pudo eliminar el repuesto" + ex.Message;
             }
         }
         public string Eliminar(int IdRepuesto)
         {
             try
             {
-                Repuesto prod = Consultar(IdRepuesto);
-                if (prod == null)
+                Repuesto repu = Consultar(IdRepuesto);
+                if (repu == null)
                 {
-                    return "El producto con el codigo ingresado no existe, por lo tanto no se puede eliminar";
+                    return "El repuesto con el codigo ingresado no existe, por lo tanto no se puede eliminar";
                 }
-                db.Repuestoes.Remove(prod);
+                db.Repuestoes.Remove(repu);
                 db.SaveChanges();
-                return "Se elimino el producto correctamente";
+                return "Se elimino el repuesto correctamente";
             }
             catch (Exception ex)
             {
-                return "No se pudo eliminar el producto" + ex.Message;
+                return "No se pudo eliminar el repuesto" + ex.Message;
             }
         }
 
         //clase despues del parcial
-        public string GrabarImagenProducto(int idProducto, List<string> Imagenes)
+        public string GrabarImagenProducto(int IdRepuesto, List<string> Imagenes)
         {
             try
             {
                 foreach (string imagen in Imagenes)
                 {
                     ImagenesProducto imagenProducto = new ImagenesProducto();
-                    imagenProducto.idProducto = idProducto;
+                    imagenProducto.idProducto = IdRepuesto;
                     imagenProducto.NombreImagen = imagen;
                     db.ImagenesProductoes.Add(imagenProducto);
                     db.SaveChanges();
@@ -117,12 +116,12 @@ namespace Servicios_Jue.Clases
             }
         }
         // hasta aqui
-        public IQueryable ListarImagenes(int idProducto)
+        public IQueryable ListarImagenes(int IdRepuesto)
         {
             return from P in db.Set<Repuesto>()
                    join I in db.Set<ImagenesProducto>()
                    on P.IdRepuesto equals I.idProducto
-                   where P.IdRepuesto == idProducto
+                   where P.IdRepuesto == IdRepuesto
                    orderby I.NombreImagen
                    select new
                    {
