@@ -391,6 +391,7 @@
     <Content Include="Models\Almacen_Repuesto_Motos.edmx.diagram">
       <DependentUpon>Almacen_Repuesto_Motos.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\site27507-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
