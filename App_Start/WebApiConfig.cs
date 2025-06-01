@@ -14,7 +14,7 @@ namespace Exam_Taller_Moto
             //Habilitar el esquema de autenticación, para la validación del token
             config.MessageHandlers.Add(new TokenValidationHandler());
             //Hablitar CORS
-            //config.EnableCors();
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 

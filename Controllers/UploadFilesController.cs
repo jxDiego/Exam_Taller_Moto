@@ -6,10 +6,11 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Exam_Taller_Moto.Controllers
 {
-    //[EnableCors(origins: "*", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/UploadFiles")]
     [Authorize]
     public class UploadFilesController : ApiController  // esta clase se encarga de subir y descargar archivos, es la gestion de los archivos

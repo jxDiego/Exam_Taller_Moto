@@ -6,11 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-//using System.Web.Http.Cors;
+using System.Web.Http.Cors;
 
 namespace Exam_Taller_Moto.Controllers
 {
-    //[EnableCors(origins: "*", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Telefonos")]
     [Authorize]
     public class TelefonoClientesController : ApiController
