@@ -75,8 +75,12 @@ namespace Exam_Taller_Moto.Controllers
             clsRepuesto Repuesto = new clsRepuesto();
             return Repuesto.Eliminar(IdRepuesto);
         }
-
-
-
+        [HttpDelete]
+        [Route("EliminarImagenProducto")]
+        public string EliminarImagenProducto(int IdRepuesto, string Imagen)
+        {
+            clsRepuesto Repuesto = new clsRepuesto();
+            return Repuesto.EliminarImagenProducto(IdRepuesto, Imagen);
+        }
     }
 }

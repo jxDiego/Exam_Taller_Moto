@@ -220,6 +220,7 @@
     <Compile Include="Clases\clsRepuesto.cs" />
     <Compile Include="Clases\clsTelefonoClientes.cs" />
     <Compile Include="Clases\clsTipoTelefono.cs" />
+    <Compile Include="Clases\clsUpload.cs" />
     <Compile Include="Clases\clsUsuario.cs" />
     <Compile Include="Clases\TokenGenerator.cs" />
     <Compile Include="Clases\TokenValidationHandler.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Controllers\RepuestosController.cs" />
     <Compile Include="Controllers\TelefonoClientesController.cs" />
     <Compile Include="Controllers\TipoTelefonosController.cs" />
+    <Compile Include="Controllers\UploadFilesController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -412,6 +414,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Archivos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\bootstrap.min.js.map" />

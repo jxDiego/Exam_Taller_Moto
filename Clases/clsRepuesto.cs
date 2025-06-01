@@ -132,13 +132,13 @@ namespace Exam_Taller_Moto.Clases
                    };
         }
         //eliminar 
-        public string EliminarImagenProducto(int idProducto, string NombreImagen)
+        public string EliminarImagenProducto(int IdRepuesto, string NombreImagen)
         {
             try
             {
                 // Buscar la imagen en la base de datos
                 ImagenesProducto imagen = db.ImagenesProductoes.FirstOrDefault(
-                    i => i.idProducto == idProducto && i.NombreImagen == NombreImagen);
+                    i => i.idProducto == IdRepuesto && i.NombreImagen == NombreImagen);
 
                 if (imagen == null)
                 {
