@@ -11,7 +11,7 @@ namespace Exam_Taller_Moto.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/UploadFiles")]
-    //[Authorize]
+    [Authorize]
     public class UploadFilesController : ApiController  // esta clase se encarga de subir y descargar archivos, es la gestion de los archivos
     {
         [HttpPost]

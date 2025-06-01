@@ -11,7 +11,7 @@ namespace Exam_Taller_Moto.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Usuarios")]
-    //[Authorize]
+    [Authorize]
     public class UsuariosController : ApiController
     {
         [HttpPost]

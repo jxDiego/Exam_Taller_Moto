@@ -12,7 +12,7 @@ namespace Servicios_Jue.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/TipoTelefonos")]
-    //[Authorize]
+    [Authorize]
     public class TipoTelefonosController : ApiController
     {
         [HttpGet]

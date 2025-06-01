@@ -11,7 +11,7 @@ namespace Exam_Taller_Moto.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Empleados")]
-    //[Authorize]
+    [Authorize]
     public class EmpleadosController : ApiController
     {
         [HttpGet] 

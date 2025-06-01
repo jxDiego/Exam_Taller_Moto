@@ -12,7 +12,7 @@ namespace Exam_Taller_Moto.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Telefonos")]
-    //[Authorize]
+    [Authorize]
     public class TelefonoClientesController : ApiController
     {
         [HttpGet]
