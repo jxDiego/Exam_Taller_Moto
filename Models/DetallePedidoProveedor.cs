@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,8 +20,10 @@ namespace Exam_Taller_Moto.Models
         public Nullable<int> IdRepuesto { get; set; }
         public Nullable<int> Cantidad { get; set; }
         public Nullable<decimal> PrecioUnitario { get; set; }
-    
+        [JsonIgnore]
+
         public virtual PedidoProveedor PedidoProveedor { get; set; }
+        [JsonIgnore]
         public virtual Repuesto Repuesto { get; set; }
     }
 }

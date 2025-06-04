@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,7 +20,8 @@ namespace Exam_Taller_Moto.Models
         public Nullable<System.DateTime> FechaInicio { get; set; }
         public Nullable<System.DateTime> FechaFin { get; set; }
         public string Descripcion { get; set; }
-    
+        [JsonIgnore]
+
         public virtual DetalleFacturaVenta DetalleFacturaVenta { get; set; }
     }
 }

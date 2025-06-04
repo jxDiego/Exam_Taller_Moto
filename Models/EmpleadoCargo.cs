@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,9 +21,12 @@ namespace Exam_Taller_Moto.Models
         public Nullable<int> CodigoCargo { get; set; }
         public Nullable<System.DateTime> FechaInicio { get; set; }
         public Nullable<System.DateTime> FechaFIn { get; set; }
-    
+        [JsonIgnore]
+
         public virtual Cargo Cargo { get; set; }
+        [JsonIgnore]
         public virtual Empleado Empleado { get; set; }
+        [JsonIgnore]
         public virtual Sede Sede { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Exam_Taller_Moto.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Text.Json.Serialization;
+    using Newtonsoft.Json;
 
     public partial class TelefonoCliente
     {

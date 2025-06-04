@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -23,7 +24,8 @@ namespace Exam_Taller_Moto.Models
         public int IdPerfil { get; set; }
         public string NombrePerfil { get; set; }
         public string PaginaNavegar { get; set; }
-    
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UsuarioPerfil> UsuarioPerfils { get; set; }
     }

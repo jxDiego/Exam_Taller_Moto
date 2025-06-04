@@ -11,7 +11,7 @@ namespace Exam_Taller_Moto.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Text.Json.Serialization;
+    using Newtonsoft.Json;
 
     public partial class TipoTelefono
     {
@@ -25,7 +25,7 @@ namespace Exam_Taller_Moto.Models
         public string Nombre { get; set; }
         public bool Activo { get; set; }
         [JsonIgnore]
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TelefonoCliente> TelefonoClientes { get; set; }
     }

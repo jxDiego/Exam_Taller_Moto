@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,7 +19,8 @@ namespace Exam_Taller_Moto.Models
         public Nullable<int> IdPedido { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
         public Nullable<decimal> MontoTotal { get; set; }
-    
+        [JsonIgnore]
+
         public virtual PedidoProveedor PedidoProveedor { get; set; }
     }
 }

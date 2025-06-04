@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -26,12 +27,16 @@ namespace Exam_Taller_Moto.Models
         public Nullable<int> IdCliente { get; set; }
         public Nullable<int> IdSede { get; set; }
         public Nullable<decimal> MontoTotal { get; set; }
-    
+        [JsonIgnore]
+
         public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<DetalleFacturaVenta> DetalleFacturaVentas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<FacturaServicio> FacturaServicios { get; set; }
+        [JsonIgnore]
         public virtual Sede Sede { get; set; }
     }
 }

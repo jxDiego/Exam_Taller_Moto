@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,8 +19,10 @@ namespace Exam_Taller_Moto.Models
         public Nullable<int> IdFacturaVenta { get; set; }
         public Nullable<int> IdServicio { get; set; }
         public string Descripcion { get; set; }
-    
+        [JsonIgnore]
+
         public virtual FacturaVenta FacturaVenta { get; set; }
+        [JsonIgnore]
         public virtual Servicio Servicio { get; set; }
     }
 }

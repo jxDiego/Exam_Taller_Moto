@@ -9,6 +9,7 @@
 
 namespace Exam_Taller_Moto.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,8 +19,10 @@ namespace Exam_Taller_Moto.Models
         public Nullable<int> CodigoUsuario { get; set; }
         public Nullable<int> CodigoPerfil { get; set; }
         public bool Activo { get; set; }
-    
+        [JsonIgnore]
+
         public virtual Perfil Perfil { get; set; }
+        [JsonIgnore]
         public virtual Usuario Usuario { get; set; }
     }
 }
