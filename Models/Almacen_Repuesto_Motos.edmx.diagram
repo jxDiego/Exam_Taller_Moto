@@ -27,7 +27,7 @@
         <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.Servicio" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.TelefonoCliente" Width="1.5" PointX="12.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.TipoTelefono" Width="1.5" PointX="10.5" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.TipoTelefono" Width="1.5" PointX="8" PointY="20.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.Usuario" Width="1.5" PointX="12" PointY="13.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel.UsuarioPerfil" Width="1.5" PointX="14.25" PointY="13.25" IsExpanded="true" />
         <AssociationConnector Association="Almacen_Repuesto_MotosModel.FK__Barrio__IdCiudad__3C69FB99" ManuallyRouted="false" />
