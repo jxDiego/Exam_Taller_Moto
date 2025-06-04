@@ -56,5 +56,13 @@ namespace Exam_Taller_Moto.Controllers
             ClsCliente clsCliente = new ClsCliente();
             return clsCliente.eliminar(idCliente);
         }
+        [HttpGet]
+        [Route("ClientesConTelefonos")]
+        public IQueryable ClientesConTelefonos()
+        {
+            ClsCliente cliente = new ClsCliente();
+            return cliente.consultarConTelefono();
+        }
+
     }
 }

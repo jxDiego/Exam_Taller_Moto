@@ -109,5 +109,26 @@ namespace Exam_Taller_Moto.Clases
                 throw new Exception("Error al consultar todos los clientes: " + ex.Message);
             }
         }
+        public IQueryable consultarConTelefono()
+        {
+            return from c in db.Set<Cliente>()
+                   join t in db.Set<TelefonoCliente>()
+                   on c.IdCliente equals t.IdCliente into cte
+                   from t in cte.DefaultIfEmpty()
+                   orderby c.PrimerApellido, c.SegundoApellido, c.Nombre
+                   group cte by new { c.IdCliente, c.Nombre, c.PrimerApellido, c.SegundoApellido, c.Email } into g
+                   select new
+                   {
+                       editar = "<img src=\"../imagenes/Edit.png\" onclick=\"Editar('" + g.Key.IdCliente + "', '" + g.Key.Nombre + "', '" +
+                                g.Key.PrimerApellido + "', '" + g.Key.SegundoApellido + "','" + g.Key.Email + "')\" style=\"cursor:grab\"/>",
+                       nroClientes = g.Count(),
+                       idCliente = g.Key.IdCliente,
+                       Cliente = g.Key.Nombre + " "+ g.Key.PrimerApellido + " " + g.Key.SegundoApellido,
+                       email = g.Key.Email,
+                       
+                   };
+
+
+    }
     }
 }

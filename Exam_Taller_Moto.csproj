@@ -354,6 +354,11 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="imagenes\Activar.png" />
+    <Content Include="imagenes\Buscar.jpg" />
+    <Content Include="imagenes\Edit.png" />
+    <Content Include="imagenes\Editar.png" />
+    <Content Include="imagenes\Eliminar.png" />
     <Content Include="Models\Almacen_Repuesto_Motos.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Almacen_Repuesto_Motos.Context.cs</LastGenOutput>
