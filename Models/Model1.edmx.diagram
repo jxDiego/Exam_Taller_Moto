@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0a9f0883df074388963c0d88cacef314" Name="Diagram1">
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Barrio" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Cargo" Width="1.5" PointX="9.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Ciudad" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Cliente" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.DetalleFacturaVenta" Width="2" PointX="14.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.DetallePedidoProveedor" Width="1.5" PointX="15" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Empleado" Width="1.5" PointX="9.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.EmpleadoCargo" Width="1.5" PointX="12" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.FacturaCompra" Width="1.5" PointX="12" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.FacturaServicio" Width="1.5" PointX="12" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.FacturaVenta" Width="1.75" PointX="9.625" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Garantia" Width="1.5" PointX="17.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.ImagenesProducto" Width="1.5" PointX="9.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Pai" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.PedidoProveedor" Width="1.5" PointX="9.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Perfil" Width="1.5" PointX="12" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Proveedor" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Repuesto" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Sede" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Servicio" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.TelefonoCliente" Width="1.5" PointX="12.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.TipoTelefono" Width="1.5" PointX="10.5" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.Usuario" Width="1.5" PointX="12" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Almacen_Repuesto_MotosModel1.UsuarioPerfil" Width="1.5" PointX="14.25" PointY="13.25" IsExpanded="true" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Barrio__IdCiudad__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Sede__IdBarrio__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__EmpleadoC__Codig__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Ciudad__IdPais__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Proveedor__IdCiu__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__FacturaVe__IdCli__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__TelefonoC__IdCli__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__DetalleFa__IdFac__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__DetalleFa__IdRep__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Garantia__IdDeta__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__DetallePe__IdPed__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__DetallePe__IdRep__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Empleado__IdSede__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__EmpleadoC__Docum__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Usuario__CodigoE__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__EmpleadoC__Codig__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__FacturaCo__IdPed__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__FacturaSe__IdFac__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__FacturaSe__IdSer__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__FacturaVe__IdSed__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK_ImagenesProducto_PRODucto" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__PedidoPro__IdPro__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__PedidoPro__IdSed__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__UsuarioPe__Codig__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__Repuesto__IdProv__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__TelefonoC__Codig__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Almacen_Repuesto_MotosModel1.FK__UsuarioPe__Codig__797309D9" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
